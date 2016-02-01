@@ -1,3 +1,4 @@
 class Project < ActiveRecord::Base
-  set_table_name 'projects'
+  def self.iron_find(id)
+    where(id: id).first
 end
