@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.order(created_at: :desc).limit(0)
+    @projects = Project.order(created_at: :desc).limit(10)
     if @projects.empty? 
       render layout: 'no_projects'
     end
