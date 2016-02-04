@@ -14,6 +14,10 @@ Timetracking::Application.routes.draw do
     resources :entries, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
+  resources :people 
+
+  patch '/people/:id/projects' => 'people#associate_project', as: :associate_project
+
 end 
 
 
