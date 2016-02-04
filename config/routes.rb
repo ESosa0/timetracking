@@ -1,6 +1,6 @@
 Timetracking::Application.routes.draw do
   get '/' => 'site#home'
-  # get '/contact' => 'site#contact'
+  get '/contact' => 'site#contact'
   # get '/projects' => 'projects#index'
   # get '/projects/:id' => 'projects#show'
   # get '/projects/:project_id/entries' => 'entries#index'
@@ -11,7 +11,7 @@ Timetracking::Application.routes.draw do
   # end
 
   resources :projects, only: [:index, :show, :new, :create] do
-    resources :entries, only: [:index, :new, :create]
+    resources :entries, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
 end 

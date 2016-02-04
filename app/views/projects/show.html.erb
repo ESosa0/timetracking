@@ -1,3 +1,4 @@
 <h1><%= @project.name %></h1> 
 <p><%= @project.description %></p> 
-<a href="<%= @project.id %>/entries">Entries</a>
+<%= link_to("See the entries", project_entries_path(@project))%>
+<%= link_to("Add new entry", new_project_entry_path(@project))%>

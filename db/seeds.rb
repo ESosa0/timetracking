@@ -14,6 +14,6 @@ Project.create name: 'Shopping', description: 'I like to shop'
 Project.create name: 'Airlines'
 Project.create name: 'Sports', description: 'Watch your favorite sports.'
 
-Entry.create project_id: 1, hours: 1, minutes: 4
-Entry.create project_id: 2, hours: 0, minutes: 5
-Entry.create project_id: 3, hours: 3, minutes: 34
+Entry.create project_id: 1, hours: 1, minutes: 4, date: Date.today
+Entry.create project_id: 2, hours: 0, minutes: 5, date: Date.today
+Entry.create project_id: 3, hours: 3, minutes: 34, date: Date.today
