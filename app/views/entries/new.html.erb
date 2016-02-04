@@ -1,25 +1,2 @@
-<% if @entry.errors.any? %>
-  <ul>
-    <% @entry.errors.full_messages.each do |error_msg| %>
-      <span style="color:red"><li><%= error_msg %> </li></span>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= form_for [@project, @entry] do |f| %>
-  <%= f.label :hours %>
-  <%= f.text_field :hours %> <!-- f is for the field -->
-  <br>
-  <%= f.label :minutes %>
-  <%= f.text_field :minutes %>
-  <br>
-  <%= f.label :date %>
-  <%= f.date_field :date %>
-  <br>
-  <%= f.label :comments %>
-  <%= f.text_field :comments %>
-  <br>
-  <%= f.submit 'Save' %>
-<% end %>
-
-<p><%= link_to("Cancel", project_entries_path)%></p>
+<h1>New entry</h1>
+<%= render 'shared/form' %>

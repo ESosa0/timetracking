@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Timetracking</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Timetracking</title>
 
-<nav> 
-  
-  <%= link_to("Home") %>
-  
-  <%= link_to("Contact", contact_path) %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+     <script>
+      $(window).load(function(){
+      $("#message").fadeOut(2000);
+      });
+    </script>
 
-  <%= link_to("Projects", projects_path) %>
- 
-  </nav>
-  <br>
-<%= flash_message %> 
-<%= yield %>
-</body>
+  </head>
+  <body>
+
+    <%= render 'shared/header'%>
+      <br>
+    <%= flash_message %> 
+    <%= yield %>
+
+  </body>
 </html>
